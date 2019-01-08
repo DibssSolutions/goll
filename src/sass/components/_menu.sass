@@ -1,0 +1,65 @@
+.menu
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	&__top
+		display: flex
+		align-items: center
+		line-height: 1
+		margin-bottom: 6px
+
+
+.search
+	margin-right: 35px
+	// display: inline-block
+	position: relative
+	&__input
+		display: none
+		padding: 10px 15px
+		color: $indigo
+		background-color: $input-bg
+		+placeholder
+			color: $indigo
+	&__icon
+
+
+.modal
+	margin-right: 35px
+	&__btn
+		padding: 10px
+		+hover
+			color: darken($indigo, 20%)
+
+.lang
+	position: relative
+	&__link
+		+hover
+			color: $accent
+			// .lang__arrow
+			// 	+arr(8, 5, $accent, b)
+	&__current
+		border-bottom: 1px dotted $indigo
+		position: relative
+		display: inline-block
+		width: 30px
+		margin-bottom: 5px
+		+hover
+			color: $indigo
+	&__arrow
+		+arr(8, 5, $indigo, b)
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+	&__list
+		display: none
+		position: absolute
+		z-index: 2
+		background-color: #ebeef1
+		width: 44px
+		height: 54px
+		left: -10px
+	&__item
+		margin-top: 8px
+		margin-left: 10px
+
