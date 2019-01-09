@@ -11,10 +11,11 @@ $slider.slick({
 });
 	
 $slider.on('wheel', (function(e) {
+  var $that = $(this);
   e.preventDefault();
   if (e.originalEvent.deltaY < 0) {
-    $(this).slick('slickNext');
+    $that.slick('slickPrev');
   } else {
-    $(this).slick('slickPrev');
+    $that.slick('slickNext');
   }
 }));

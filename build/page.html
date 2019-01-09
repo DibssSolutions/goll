@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Glosav</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -14,48 +14,163 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__container container">
+          <a href="#" class="header__logo">
+            <img src="./img/logo.png" alt="Glosav" class="header__logo-img">
+          </a>
+          <div class="header__menu menu">
+            <div class="menu__top">
+              <div class="menu__search search">
+                <form action="" autocomplete="on" class="search__form">
+                  <input type="text" placeholder="Система слежения" class="search__input">
+                  <button type="button" class="search__icon button">
+                    <svg class="icon icon-search">
+                      <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="menu__modal modal">
+                <button type="button" class="modal__btn button">Войти</button>
+                <div class="modal__content"></div>
+              </div>
+              <div class="menu__lang lang js-lang">
+                <a href="#" class="lang__current lang__link"> Ru <div class="lang__arrow"></div>
+                </a>
+                <ul class="lang__list js-lang__list">
+                  <li class="lang__item"><a href="#" class="lang__extra lang__link">Ua</a></li>
+                  <li class="lang__item"><a href="#" class="lang__extra lang__link">En</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu__bot">
+              <nav class="menu__nav nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">О компании</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Направления</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Продукты</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Новости</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER -->
+      <!-- MAIN -->
+      <main class="main">
+        <div class="main__popup"></div>
+        <ul class="main__slider slider js-slider">
+          <li class="slider__item slide">
+            <a href="#" class="slide__link" data-modal-trigger="integration">
+              <div class="slide__img-border">
+                <div class="slide__img-wrap">
+                  <div class="slide__img slide__img-3"></div>
+                </div>
+              </div>
+              <h2 class="slide__title title"><span class="block">Системная</span> Интеграция</h2>
+            </a>
+          </li>
+          <li class="slider__item slide">
+            <a href="#" class="slide__link" data-modal-trigger="technologies">
+              <div class="slide__img-border">
+                <div class="slide__img-wrap">
+                  <div class="slide__img slide__img-4"></div>
+                </div>
+              </div>
+              <h2 class="slide__title title">Технологии</h2>
+            </a>
+          </li>
+          <li class="slider__item slide">
+            <a href="#" class="slide__link" data-modal-trigger="monitoring">
+              <div class="slide__img-border">
+                <div class="slide__img-wrap">
+                  <div class="slide__img slide__img-1"></div>
+                </div>
+              </div>
+              <h2 class="slide__title title"><span class="block">Мониторинг</span> и тахография</h2>
+            </a>
+          </li>
+          <li class="slider__item slide">
+            <a href="" class="slide__link" data-modal-trigger="developing">
+              <div class="slide__img-border">
+                <div class="slide__img-wrap">
+                  <div class="slide__img slide__img-2"></div>
+                </div>
+              </div>
+              <h2 class="slide__title title">Разработка ПО</h2>
+            </a>
+          </li>
+        </ul>
+      </main>
+      <!-- MAIN -->
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__copy">ООО “Глосав”. Все права защищены</div>
+          <ul class="footer__contacts contacts">
+            <li class="contacts__item">
+              <a href="#" class="contacts__link">
+                <svg class="icon icon-map">
+                  <use xlink:href="img/sprite.svg#icon-map"></use>
+                </svg>
+                <span class="contacts__text">Москва, Кожевнический проезд., д. 1</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:commerce@glosav.ru" class="contacts__link">
+                <svg class="icon icon-mail">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+                <span class="contacts__text">commerce@glosav.ru</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+7 (495) 644 33 59" class="contacts__link">
+                <svg class="icon icon-phone">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+                <span class="contacts__text">+7 (495) 644 33 59</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <!-- FOOTER -->
+      <!-- MODAL -->
+      <section class="popup" data-modal="integration">
+        <div class="popup__overlay">
+          <div class="popup__container container">
+            <div class="popup__item slide slide_popup">
+              <a href="#" class="slide__link">
+                <div class="slide__img-border">
+                  <div class="slide__img-wrap">
+                    <div class="slide-popup__overlay">
+                      <p class="slide-popup__description">Система для компаний, занимающихся дистрибуцией. Может быть использована как дляоснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                    </div>
+                    <div class="slide__img slide__img-3"></div>
+                  </div>
+                </div>
+                <h2 class="slide__title title"><span class="block">Системная</span> Интеграция</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MODAL -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
