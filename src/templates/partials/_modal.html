@@ -1,0 +1,37 @@
+{% import 'data/specialization.html' as data %}
+{% for item in data.specialization_item %}
+    <div class="popup" data-modal="{{item.modal_name}}" data-length-features="6">
+    	<div class="popup__container container">
+    		<div class="popup__wrap">
+					<div class="popup__main specialization specialization_popup">
+						<a href="#" class="specialization__link">
+							<div class="specialization__img-border">
+								<div class="specialization__img-wrap">
+									<div class="specialization_popup__overlay">
+										<div class="specialization_popup__overlay-inner">
+											<p>{{item.text}}</p>
+											<button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
+										</div>
+									</div>
+									<div class="specialization__img specialization__{{item.img}}"></div>
+								</div>
+								</div>
+							<h2 class="specialization__title title">{{item.title}}</h2>
+						</a>
+					</div>
+					{% for item in item.features %}
+						<div class="popup__features features">
+							<a href="#" class="features__link">
+								<div class="features__border">
+									<div class="features__wrap">
+										<div class="features__img features__img-1"></div>
+									</div>
+								</div>
+								<h3 class="features__title title_sm">{{item.features_title}}</h3>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+    	</div>
+    </div>
+{% endfor %}

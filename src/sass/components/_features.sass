@@ -1,0 +1,41 @@
+.features
+	position: absolute
+	top: -83px
+	left: -153px
+	text-align: center
+	&__link
+		display: inline-block
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			display: block
+			width: 80px
+			height: 2px
+			background-color: $border
+			+rotate(30)
+			right: -60px
+			top: 130px
+		+hover
+			.features__border
+				border-color: $accent
+			.features__title
+				color: $accent
+	&__border
+		+circle(140)
+		border: 2px solid $border
+		position: relative
+		transition: border-color .3s
+	&__wrap
+		+vcenter
+		+circle(130)
+		overflow: hidden
+	&__img
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		height: 130px
+	&__img-1
+		background-image: url('../img/delivery.png')
+		background-position: -42px -15px
+		background-size: 300px

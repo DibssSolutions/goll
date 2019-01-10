@@ -1,45 +1,18 @@
+{% import 'data/specialization.html' as data %}
 <main class="main">
 	<div class="main__popup"></div>
 	<ul class="main__slider slider js-slider">
-		<li class="slider__item slide">
-			<a href="#" class="slide__link" data-modal-trigger="integration">
-				<div class="slide__img-border">
-					<div class="slide__img-wrap">
-						<div class="slide__img slide__img-3"></div>
-					</div>
-					</div>
-				<h2 class="slide__title title"><span class="block">Системная</span> Интеграция</h2>
-			</a>
-		</li>
-		<li class="slider__item slide">
-			<a href="#" class="slide__link" data-modal-trigger="technologies">
-				<div class="slide__img-border">
-					<div class="slide__img-wrap">
-						<div class="slide__img slide__img-4"></div>
-					</div>
-					</div>
-				<h2 class="slide__title title">Технологии</h2>
-			</a>
-		</li>
-		<li class="slider__item slide">
-			<a href="#" class="slide__link" data-modal-trigger="monitoring">
-				<div class="slide__img-border">
-					<div class="slide__img-wrap">
-						<div class="slide__img slide__img-1"></div>
-					</div>
-					</div>
-				<h2 class="slide__title title"><span class="block">Мониторинг</span> и тахография</h2>
-			</a>
-		</li>
-		<li class="slider__item slide">
-			<a href="" class="slide__link" data-modal-trigger="developing">
-				<div class="slide__img-border">
-					<div class="slide__img-wrap">
-						<div class="slide__img slide__img-2"></div>
-					</div>
-					</div>
-				<h2 class="slide__title title">Разработка ПО</h2>
-			</a>
-		</li>
+		{% for item in data.specialization_item %}
+			<li class="slider__item specialization specialization_slide">
+				<a href="#" class="specialization__link" data-modal-trigger="{{item.modal_name}}">
+					<div class="specialization__img-border">
+						<div class="specialization__img-wrap">
+							<div class="specialization__img specialization__{{item.img}}"></div>
+						</div>
+						</div>
+					<h2 class="specialization__title title">{{item.title}}</h2>
+				</a>
+			</li>
+		{% endfor %}
 	</ul>
 </main>

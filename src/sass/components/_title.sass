@@ -1,3 +1,10 @@
 .title
 	+f(20px, 500)
 	color: $indigo
+	&_sm
+		+f(14px, 500)
+		transition: color .3s
+		color: $indigo
+		text-transform: uppercase
+		+hover
+			color: $accent

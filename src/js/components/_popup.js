@@ -1,12 +1,16 @@
+import {OPEN} from '../constants';
 var trigger = $('[data-modal-trigger]');
-var data = (trigger.attr('data-modal-trigger'));
-console.log(data);
-var target = $('[data-modal]');
-console.log(target);
+trigger.on('click', function(e) {
+  e.preventDefault();
+  var that = $(this);
+  var id = that.data('modal-trigger');
 
-if (target.attr('[data-modal]') == data) {
-}
+  var modal = $(`[data-modal=${id}]`);
+  modal.addClass(OPEN);
+});
 
-$(data).addClass('is-open');
-
+// var popup = $('[data-modal]');
+// popup.on('click', function() {
+//   $(this).removeClass(OPEN);
+// });
 
