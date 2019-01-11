@@ -1,8 +1,8 @@
 {% import 'data/specialization.html' as data %}
 {% for item in data.specialization_item %}
-    <div class="popup" data-modal="{{item.modal_name}}" data-length-features="6">
+    <div class="popup" data-modal="{{item.modal_name}}" data-length-features="1">
     	<div class="popup__container container">
-    		<div class="popup__wrap">
+    		<div class="popup__wrap js-popup-wrap">
 					<div class="popup__main specialization specialization_popup">
 						<a href="#" class="specialization__link">
 							<div class="specialization__img-border">
@@ -19,18 +19,20 @@
 							<h2 class="specialization__title title">{{item.title}}</h2>
 						</a>
 					</div>
-					{% for item in item.features %}
-						<div class="popup__features features">
+					<div class="popup__features">
+					{% for feature in item.features %}
+						<div class="features">
 							<a href="#" class="features__link">
 								<div class="features__border">
 									<div class="features__wrap">
-										<div class="features__img features__img-1"></div>
+										<div class="features__img" style="background-image: url('/img/{{feature.features_img}}.png')"></div>
 									</div>
 								</div>
-								<h3 class="features__title title_sm">{{item.features_title}}</h3>
+								<h3 class="features__title title_sm">{{feature.features_title}}</h3>
 							</a>
 						</div>
 					{% endfor %}
+					</div>
 				</div>
     	</div>
     </div>

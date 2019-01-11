@@ -1,8 +1,60 @@
 .features
 	position: absolute
-	top: -83px
-	left: -153px
+	top: 0
+	left: 0
 	text-align: center
+	&:nth-child(1)
+		[data-length-features="6"] &
+			top: -83px
+			left: -135px
+			.features__link
+				&:after
+					+rotate(30)
+					right: -40px
+					top: 133px
+	&:nth-child(2)
+		[data-length-features="6"] &
+			top: 136px
+			left: -258px
+			.features__link
+				&:after
+					right: -9px
+					top: 69px
+	&:nth-child(3)
+		[data-length-features="6"] &
+			top: 338px
+			left: -144px
+			.features__link
+				&:after
+					+rotate(-30)
+					right: -51px
+					top: 20px
+	&:nth-child(4)
+		[data-length-features="6"] &
+			top: -84px
+			left: 548px
+			.features__link
+				&:after
+					+rotate(-30)
+					right: 116px
+					top: 133px
+	&:nth-child(5)
+		[data-length-features="6"] &
+			top: 136px
+			left: 616px
+			.features__link
+				&:after
+					right: 139px
+					top: 69px
+	&:nth-child(6)
+		[data-length-features="6"] &
+			top: 338px
+			left: 557px
+			.features__link
+				&:after
+					+rotate(30)
+					right: 126px
+					top: 20px
 	&__link
 		display: inline-block
 		position: relative
@@ -10,18 +62,16 @@
 			content: ''
 			position: absolute
 			display: block
-			width: 80px
+			width: 65px
 			height: 2px
 			background-color: $border
-			+rotate(30)
-			right: -60px
-			top: 130px
 		+hover
 			.features__border
 				border-color: $accent
 			.features__title
 				color: $accent
 	&__border
+		margin: 0 auto
 		+circle(140)
 		border: 2px solid $border
 		position: relative
@@ -35,7 +85,6 @@
 		background-position: center
 		background-size: cover
 		height: 130px
-	&__img-1
-		background-image: url('../img/delivery.png')
-		background-position: -42px -15px
-		background-size: 300px
+	&__title
+		max-width: 250px
+		margin-top: 5px
