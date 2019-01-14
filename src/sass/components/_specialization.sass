@@ -37,22 +37,6 @@
 		margin-top: 30px
 		+tr(color 300ms)
 		text-transform: uppercase
-	// &__img-1
-	// 	background-image: url('/img/car.png')
-	// 	background-size: 200%
-	// 	background-position: 70% 60%
-	// &__img-2
-	// 	background-image: url('/img/html.png')
-	// 	background-position: 60% -10px
-	// 	background-size: 140%
-	// &__img-3
-	// 	background-image: url('/img/lan.png')
-	// 	background-size: 150%
-	// 	background-position: 34% -5%
-	// &__img-4
-	// 	background-image: url('/img/road.png')
-	// 	background-position: 60% -40px
-	// 	background-size: 180%
 
 
 // Slider modifier
@@ -92,8 +76,19 @@
 		width: 300px
 	&__overlay-button
 		margin-top: 30px
+	&__button
+		position: absolute
+		top: -35px
+		right: 130px
+		+circle(63)
+		background-color: $accent
+		background-image: url('/img/close.svg')
+		background-repeat: no-repeat
+		background-position: center
+		cursor: pointer
 	& .specialization__link
 		padding: 0 75px
+		position: relative
 	& .specialization__img-wrap
 		+circle(437)
 	& .specialization__img-border
@@ -107,21 +102,10 @@
 			height: 510px
 			top: -60px
 			left: 40px
+	& .specialization__img
+		height: 500px
 	& .specialization__title
 		color: $accent
 		margin-top: 90px
-	& .specialization__link
-		position: relative
-		&:after
-			content: ''
-			position: absolute
-			top: -35px
-			right: 130px
-			+circle(63)
-			background-color: $accent
-			background-image: url('../img/close.svg')
-			background-repeat: no-repeat
-			background-position: center
-			cursor: pointer
 
 // Popup modifier

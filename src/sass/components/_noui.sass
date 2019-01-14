@@ -1,0 +1,52 @@
+.noUi-target
+	width: 124px
+	height: 20px
+	background: none
+	box-shadow: none
+	border: none
+	border-radius: 0
+	border-top: 2px dotted $border
+	position: relative
+	top: 9px
+	margin: 0 15px 0 45px
+
+.noUi-horizontal .noUi-handle
+	border: none
+	+circle(40)
+	box-shadow: none
+	top: -21px
+	background-color: $input-slider
+.noUi-handle
+	cursor: pointer
+	&:before
+		+circle(38)
+		border: 1px solid $border
+		background-color: transparent
+		+vcenter
+	&:after
+		+circle(4)
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: $border
+		+vcenter
+.noUi-base
+	&:before
+		content: ''
+		position: absolute
+		+circle(14)
+		background-color: $input-slider
+		border: 1px solid $border
+		right: -5px
+		top: -8px
+	&:after
+		content: ''
+		position: absolute
+		+circle(4)
+		background-color: $border
+		right: 0
+		top: -3px
+
+
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle
+	right: -5px

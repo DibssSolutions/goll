@@ -1,6 +1,10 @@
 {% import 'data/specialization.html' as data %}
 <main class="main">
-	<div class="main__popup"></div>
+	<div class="main__input-slider">
+		Потяните
+		<div class="input-slider"></div>
+		для просмотра
+	</div>
 	<ul class="main__slider slider js-slider">
 		{% for item in data.specialization_item %}
 			<li class="slider__item specialization specialization_slide">

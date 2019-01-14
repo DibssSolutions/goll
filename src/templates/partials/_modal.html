@@ -1,6 +1,6 @@
 {% import 'data/specialization.html' as data %}
 {% for item in data.specialization_item %}
-    <div class="popup" data-modal="{{item.modal_name}}" data-length-features="1">
+    <div class="popup" data-modal="{{item.modal_name}}" data-length-features="">
     	<div class="popup__container container">
     		<div class="popup__wrap js-popup-wrap">
 					<div class="popup__main specialization specialization_popup">
@@ -13,10 +13,11 @@
 											<button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
 										</div>
 									</div>
-									<div class="specialization__img specialization__{{item.img}}"></div>
+									<div class="specialization__img" style="background-image: url('/img/{{item.img}}.png')"></div>
 								</div>
 								</div>
 							<h2 class="specialization__title title">{{item.title}}</h2>
+							<button type="button" class="specialization_popup__button button"></button>
 						</a>
 					</div>
 					<div class="popup__features">

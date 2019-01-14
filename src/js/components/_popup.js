@@ -17,6 +17,13 @@ popup.on('click', function(e) {						// событие клика по блок�
   }
 });
 
+var close = $('.specialization_popup__button');
+close.on('click', function() {
+  popup.trigger('click');
+});
+
+// console.log(close);
+
 $('[data-modal]').each(function() {
   var this_ = $(this);
   var itemLength = this_.find('.features').length;

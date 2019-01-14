@@ -10,6 +10,7 @@
 	align-items: center
 	justify-content: center
 	background-color: rgba(235, 238, 240, 0.9)
+	z-index: 5
 	&__container
 		max-width: 1100px
 		width: 100%
@@ -36,6 +37,30 @@
 			left: 510px
 			top: 65px
 			pointer-events: none
+		[data-length-features="5"] &, [data-length-features="4"] &, [data-length-features="3"] &
+			&:before
+				background-image: url('/img/small-left-line.svg')
+				background-repeat: no-repeat
+				width: 15px
+				height: 160px
+				top: 115px
+				pointer-events: none
+		[data-length-features="4"] &
+			&:after
+				background-image: url('/img/small-right-line.svg')
+				background-repeat: no-repeat
+				width: 15px
+				height: 160px
+				left: 530px
+				top: 115px
+				+rotate(-3)
+				pointer-events: none
+		[data-length-features="3"] &, [data-length-features="2"] &, [data-length-features="1"] &
+			&:after
+				display: none
+		[data-length-features="2"] &, [data-length-features="1"] &
+			&:before
+				display: none
 	&__features
 
 [data-modal]

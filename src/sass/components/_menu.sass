@@ -11,16 +11,26 @@
 
 .search
 	margin-right: 35px
-	// display: inline-block
 	position: relative
 	&__input
-		display: none
+		width: 0
+		opacity: 0
+		visibility: hidden
 		padding: 10px 15px
 		color: $indigo
 		background-color: $input-bg
+		transition: width .3s
+		position: relative
+		left: 30px
 		+placeholder
 			color: $indigo
 	&__icon
+		position: relative
+		top: 4px
+.search__input_open
+	width: 280px
+	opacity: 1
+	visibility: visible
 
 
 .modal
