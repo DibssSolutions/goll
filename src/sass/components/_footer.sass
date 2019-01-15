@@ -1,12 +1,19 @@
 .footer
-	padding: 20px 0 30px
+	padding-top: 20px
+	height: 10vh
+	min-height: 50px
+	display: flex
+	align-items: center
 	&__container
+		width: 100%
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
 		align-items: center
 	&__copy
-		padding-bottom: 18px
+		padding: 0 18px 18px 0
+		+lg
+			order: 2
 
 .contacts
 	display: flex

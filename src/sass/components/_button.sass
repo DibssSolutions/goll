@@ -13,3 +13,23 @@
 		+hover
 			color: $indigo
 			background-color: $white
+	&_close
+		position: absolute
+		+circle(63)
+		background-color: $accent
+		background-image: url('/img/close.svg')
+		background-repeat: no-repeat
+		background-position: center
+		cursor: pointer
+		&_small
+			+circle(43)
+			background-image: url('/img/close-small.svg')
+			background-repeat: no-repeat
+			background-position: center
+	&_sm
+		padding: 20px 30px
+		font-size: 16px
+		color: $white
+		border-radius: 40px
+		background-color: $accent
+		min-width: 160px

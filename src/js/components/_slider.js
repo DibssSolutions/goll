@@ -7,7 +7,13 @@ $slider.slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   arrows: false,
-  centerMode: true
+  centerMode: true,
+  responsive: [
+    {
+      breakpoint: 784,
+      settings: 'unslick'
+    }
+  ]
 });
 	
 $slider.on('wheel', (function(e) {

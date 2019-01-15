@@ -22,7 +22,6 @@ close.on('click', function() {
   popup.trigger('click');
 });
 
-// console.log(close);
 
 $('[data-modal]').each(function() {
   var this_ = $(this);
