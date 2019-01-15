@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="icon" href="/img/favicon.png">
   </head>
 
   <body>
@@ -18,14 +19,17 @@
       <header class="header">
         <div class="header__container container">
           <a href="#" class="header__logo">
-            <img src="./img/logo.png" alt="Glosav" class="header__logo-img">
+            <img src="/img/logo.png" alt="Glosav" class="header__logo-img">
           </a>
-          <div class="header__menu menu">
+          <div class="header__toggle js-toggle">
+            <div class="header__toggle-icon js-toggle-icon"></div>
+          </div>
+          <div class="header__menu menu js-menu">
             <div class="menu__top">
               <div class="menu__search search">
                 <form action="" autocomplete="on" class="search__form">
-                  <input type="text" placeholder="Система слежения" class="search__input">
-                  <button type="button" class="search__icon button">
+                  <input type="text" placeholder="Система слежения" class="search__input js-search-input">
+                  <button type="submit" class="search__icon js-search-icon button">
                     <svg class="icon icon-search">
                       <use xlink:href="img/sprite.svg#icon-search"></use>
                     </svg>
@@ -33,7 +37,7 @@
                 </form>
               </div>
               <div class="menu__modal modal">
-                <button type="button" class="modal__btn button">Войти</button>
+                <button type="button" class="modal__btn button js-modal-btn ">Войти</button>
                 <div class="modal__content"></div>
               </div>
               <div class="menu__lang lang js-lang">
@@ -72,13 +76,13 @@
       <!-- HEADER -->
       <!-- MAIN -->
       <main class="main">
-        <div class="main__popup"></div>
+        <div class="main__input-slider"> Потяните <div class="input-slider"></div> для просмотра </div>
         <ul class="main__slider slider js-slider">
           <li class="slider__item specialization specialization_slide">
             <a href="#" class="specialization__link" data-modal-trigger="integration">
               <div class="specialization__img-border">
                 <div class="specialization__img-wrap">
-                  <div class="specialization__img specialization__img-3"></div>
+                  <div class="specialization__img" style="background-image: url('/img/lan.png')"></div>
                 </div>
               </div>
               <h2 class="specialization__title title">Системная Интеграция</h2>
@@ -88,7 +92,7 @@
             <a href="#" class="specialization__link" data-modal-trigger="technologies">
               <div class="specialization__img-border">
                 <div class="specialization__img-wrap">
-                  <div class="specialization__img specialization__img-4"></div>
+                  <div class="specialization__img" style="background-image: url('/img/road.png')"></div>
                 </div>
               </div>
               <h2 class="specialization__title title">Технологии</h2>
@@ -98,7 +102,7 @@
             <a href="#" class="specialization__link" data-modal-trigger="monitoring">
               <div class="specialization__img-border">
                 <div class="specialization__img-wrap">
-                  <div class="specialization__img specialization__img-1"></div>
+                  <div class="specialization__img" style="background-image: url('/img/car.png')"></div>
                 </div>
               </div>
               <h2 class="specialization__title title">Мониторинг и тахография</h2>
@@ -108,10 +112,30 @@
             <a href="#" class="specialization__link" data-modal-trigger="developing">
               <div class="specialization__img-border">
                 <div class="specialization__img-wrap">
-                  <div class="specialization__img specialization__img-2"></div>
+                  <div class="specialization__img" style="background-image: url('/img/html.png')"></div>
                 </div>
               </div>
               <h2 class="specialization__title title">Разработка ПО</h2>
+            </a>
+          </li>
+          <li class="slider__item specialization specialization_slide">
+            <a href="#" class="specialization__link" data-modal-trigger="tourism">
+              <div class="specialization__img-border">
+                <div class="specialization__img-wrap">
+                  <div class="specialization__img" style="background-image: url('/img/html.png')"></div>
+                </div>
+              </div>
+              <h2 class="specialization__title title">Спутник</h2>
+            </a>
+          </li>
+          <li class="slider__item specialization specialization_slide">
+            <a href="#" class="specialization__link" data-modal-trigger="satelite">
+              <div class="specialization__img-border">
+                <div class="specialization__img-wrap">
+                  <div class="specialization__img" style="background-image: url('/img/html.png')"></div>
+                </div>
+              </div>
+              <h2 class="specialization__title title">Туризм</h2>
             </a>
           </li>
         </ul>
@@ -151,9 +175,9 @@
       </footer>
       <!-- FOOTER -->
       <!-- MODAL -->
-      <div class="popup" data-modal="integration" data-length-features="6">
+      <div class="popup" data-modal="integration" data-length-features="">
         <div class="popup__container container">
-          <div class="popup__wrap">
+          <div class="popup__wrap js-popup-wrap">
             <div class="popup__main specialization specialization_popup">
               <a href="#" class="specialization__link">
                 <div class="specialization__img-border">
@@ -164,78 +188,81 @@
                         <button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
                       </div>
                     </div>
-                    <div class="specialization__img specialization__img-3"></div>
+                    <div class="specialization__img" style="background-image: url('/img/lan.png')"></div>
                   </div>
                 </div>
                 <h2 class="specialization__title title">Системная Интеграция</h2>
+                <button type="button" class="specialization_popup__button button button_close"></button>
               </a>
             </div>
-            <div class="popup__features features">
-              <a href="#" class="features__link">
-                <div class="features__border">
-                  <div class="features__wrap">
-                    <div class="features__img features__img-1"></div>
+            <div class="popup__features">
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
                   </div>
-                </div>
-                <h3 class="features__title title_sm">Поставкa</h3>
-              </a>
-            </div>
-            <div class="popup__features features">
-              <a href="#" class="features__link">
-                <div class="features__border">
-                  <div class="features__wrap">
-                    <div class="features__img features__img-1"></div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/assembly.png')"></div>
+                    </div>
                   </div>
-                </div>
-                <h3 class="features__title title_sm">Поставкa</h3>
-              </a>
-            </div>
-            <div class="popup__features features">
-              <a href="#" class="features__link">
-                <div class="features__border">
-                  <div class="features__wrap">
-                    <div class="features__img features__img-1"></div>
+                  <h3 class="features__title title_sm">Монтаж высокопрофессиональный</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/launch.png')"></div>
+                    </div>
                   </div>
-                </div>
-                <h3 class="features__title title_sm">Поставкa</h3>
-              </a>
-            </div>
-            <div class="popup__features features">
-              <a href="#" class="features__link">
-                <div class="features__border">
-                  <div class="features__wrap">
-                    <div class="features__img features__img-1"></div>
+                  <h3 class="features__title title_sm">Пусконаладка</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
                   </div>
-                </div>
-                <h3 class="features__title title_sm">Поставкa</h3>
-              </a>
-            </div>
-            <div class="popup__features features">
-              <a href="#" class="features__link">
-                <div class="features__border">
-                  <div class="features__wrap">
-                    <div class="features__img features__img-1"></div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/assembly.png')"></div>
+                    </div>
                   </div>
-                </div>
-                <h3 class="features__title title_sm">Поставкa</h3>
-              </a>
-            </div>
-            <div class="popup__features features">
-              <a href="#" class="features__link">
-                <div class="features__border">
-                  <div class="features__wrap">
-                    <div class="features__img features__img-1"></div>
+                  <h3 class="features__title title_sm">Монтаж</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/launch.png')"></div>
+                    </div>
                   </div>
-                </div>
-                <h3 class="features__title title_sm">Поставкa</h3>
-              </a>
+                  <h3 class="features__title title_sm">Пусконаладка</h3>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="popup" data-modal="technologies" data-length-features="6">
+      <div class="popup" data-modal="technologies" data-length-features="">
         <div class="popup__container container">
-          <div class="popup__wrap">
+          <div class="popup__wrap js-popup-wrap">
             <div class="popup__main specialization specialization_popup">
               <a href="#" class="specialization__link">
                 <div class="specialization__img-border">
@@ -246,18 +273,61 @@
                         <button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
                       </div>
                     </div>
-                    <div class="specialization__img specialization__img-4"></div>
+                    <div class="specialization__img" style="background-image: url('/img/road.png')"></div>
                   </div>
                 </div>
                 <h2 class="specialization__title title">Технологии</h2>
+                <button type="button" class="specialization_popup__button button button_close"></button>
               </a>
+            </div>
+            <div class="popup__features">
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/launch.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Пусконаладка</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/assembly.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Монтаж</h3>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="popup" data-modal="monitoring" data-length-features="6">
+      <div class="popup" data-modal="monitoring" data-length-features="">
         <div class="popup__container container">
-          <div class="popup__wrap">
+          <div class="popup__wrap js-popup-wrap">
             <div class="popup__main specialization specialization_popup">
               <a href="#" class="specialization__link">
                 <div class="specialization__img-border">
@@ -268,18 +338,51 @@
                         <button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
                       </div>
                     </div>
-                    <div class="specialization__img specialization__img-1"></div>
+                    <div class="specialization__img" style="background-image: url('/img/car.png')"></div>
                   </div>
                 </div>
                 <h2 class="specialization__title title">Мониторинг и тахография</h2>
+                <button type="button" class="specialization_popup__button button button_close"></button>
               </a>
+            </div>
+            <div class="popup__features">
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/launch.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Пусконаладка</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="popup" data-modal="developing" data-length-features="6">
+      <div class="popup" data-modal="developing" data-length-features="">
         <div class="popup__container container">
-          <div class="popup__wrap">
+          <div class="popup__wrap js-popup-wrap">
             <div class="popup__main specialization specialization_popup">
               <a href="#" class="specialization__link">
                 <div class="specialization__img-border">
@@ -290,16 +393,175 @@
                         <button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
                       </div>
                     </div>
-                    <div class="specialization__img specialization__img-2"></div>
+                    <div class="specialization__img" style="background-image: url('/img/html.png')"></div>
                   </div>
                 </div>
                 <h2 class="specialization__title title">Разработка ПО</h2>
+                <button type="button" class="specialization_popup__button button button_close"></button>
               </a>
+            </div>
+            <div class="popup__features">
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/assembly.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Монтаж высокопрофессиональный</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/launch.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Пусконаладка</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/assembly.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Монтаж</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" data-modal="tourism" data-length-features="">
+        <div class="popup__container container">
+          <div class="popup__wrap js-popup-wrap">
+            <div class="popup__main specialization specialization_popup">
+              <a href="#" class="specialization__link">
+                <div class="specialization__img-border">
+                  <div class="specialization__img-wrap">
+                    <div class="specialization_popup__overlay">
+                      <div class="specialization_popup__overlay-inner">
+                        <p>Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                        <button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
+                      </div>
+                    </div>
+                    <div class="specialization__img" style="background-image: url('/img/html.png')"></div>
+                  </div>
+                </div>
+                <h2 class="specialization__title title">Спутник</h2>
+                <button type="button" class="specialization_popup__button button button_close"></button>
+              </a>
+            </div>
+            <div class="popup__features">
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/assembly.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Монтаж высокопрофессиональный</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" data-modal="satelite" data-length-features="">
+        <div class="popup__container container">
+          <div class="popup__wrap js-popup-wrap">
+            <div class="popup__main specialization specialization_popup">
+              <a href="#" class="specialization__link">
+                <div class="specialization__img-border">
+                  <div class="specialization__img-wrap">
+                    <div class="specialization_popup__overlay">
+                      <div class="specialization_popup__overlay-inner">
+                        <p>Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                        <button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
+                      </div>
+                    </div>
+                    <div class="specialization__img" style="background-image: url('/img/html.png')"></div>
+                  </div>
+                </div>
+                <h2 class="specialization__title title">Туризм</h2>
+                <button type="button" class="specialization_popup__button button button_close"></button>
+              </a>
+            </div>
+            <div class="popup__features">
+              <div class="features">
+                <a href="#" class="features__link">
+                  <div class="features__border">
+                    <div class="features__wrap">
+                      <div class="features__img" style="background-image: url('/img/delivery.png')"></div>
+                    </div>
+                  </div>
+                  <h3 class="features__title title_sm">Поставкa</h3>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- MODAL -->
+      <!-- POPUP VIDEO -->
+      <div class="popup-video popup js-popup-video">
+        <div class="popup-video__container container">
+          <div class="popup-video__wrap js-popup-video-wrap">
+            <iframe id="Youtube" class="popup-video__video" width="1042 " height="587 " src="https://www.youtube.com/embed/9YffrCViTVk?controls=1&rel=0&showinfo=0&enablejsapi=1" frameborder="0"></iframe>
+            <button id="pauseYoutube" type="button" class="popup-video__button button button_close"></button>
+          </div>
+        </div>
+      </div>
+      <!-- POPUP VIDEO -->
+      <!-- LOGIN FORM -->
+      <div class="login_popup popup js-login-popup">
+        <div class="login_popup__container container">
+          <form action="" class="login_popup__login-form login-form js-login-form">
+            <h3 class="login-form__title title_mid">Вход в web-систему</h3>
+            <input type="text" class="login-form__input" placeholder="Компания">
+            <!-- <span class="login-form__message">*Не верно введены данные в этом поле. Пожалуста  проверте написание</span> -->
+            <input type="text" class="login-form__input" placeholder="Логин">
+            <!-- <span class="login-form__message">*Не верно введены данные</span> -->
+            <input type="text" class="login-form__input" placeholder="Пароль">
+            <button type="button" class="button login-form__button button_sm">Войти</button>
+            <button type="button" class="login-form__close button button_close button_close_small js-button-close"></button>
+          </form>
+        </div>
+      </div>
+      <!-- LOGIN FORM -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
