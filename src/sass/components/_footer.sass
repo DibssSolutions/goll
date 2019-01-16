@@ -4,12 +4,17 @@
 	min-height: 50px
 	display: flex
 	align-items: center
+	+sm
+		height: auto
 	&__container
 		width: 100%
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
 		align-items: center
+		+sm
+			flex-direction: column
+			align-items: flex-start
 	&__copy
 		padding: 0 18px 18px 0
 		+lg
@@ -18,15 +23,29 @@
 .contacts
 	display: flex
 	flex-wrap: wrap
+	+sm
+		flex-direction: column
+		margin-bottom: 20px
 	&__item
 		padding-bottom: 20px
 		&:not(:last-child)
 			margin-right: 40px
+			+sm
+				margin-right: 0
 		+hover
 			.icon-map, .icon-phone, .icon-mail
 				fill: $accent
 			.contacts__text
 				opacity: 0.7
+		+sm
+			&:nth-child(1)
+				order: 3
+			&:nth-child(2)
+				order: 2
+			&:nth-child(3)
+				order: 1
+		+xs
+			font-size: 13px
 	&__link
 		padding: 5px 0
 
