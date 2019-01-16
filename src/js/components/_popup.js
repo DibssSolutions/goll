@@ -1,7 +1,5 @@
-import {OPEN} from '../constants';
-import {OVERFLOW_HIDDEN} from '../constants';
+import {OPEN, OVERFLOW_HIDDEN, BODY} from '../constants';
 
-var body = $('body');
 var trigger = $('[data-modal-trigger]');
 trigger.on('click', function(e) {
   e.preventDefault();
@@ -9,7 +7,7 @@ trigger.on('click', function(e) {
   var id = that.data('modal-trigger');
   var modal = $(`[data-modal=${id}]`);
   modal.addClass(OPEN);
-  body.addClass(OVERFLOW_HIDDEN);
+  BODY.addClass(OVERFLOW_HIDDEN);
 });
 
 var popup = $('[data-modal]');
@@ -18,7 +16,7 @@ popup.on('click', function(e) {						// событие клика по блок�
   if (!block.is(e.target)									// проверка условия если клик был не по нашему блоку
   	&& block.has(e.target).length === 0) {// проверка условия если клик не по его дочерним элементам
   	$(this).removeClass(OPEN);						// усли условия выполняются 	 убираеться класс is-open
-    body.removeClass(OVERFLOW_HIDDEN);
+    BODY.removeClass(OVERFLOW_HIDDEN);
   }
 });
 

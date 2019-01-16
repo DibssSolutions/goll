@@ -28,6 +28,8 @@
 .search
 	margin-right: 35px
 	position: relative
+	&__input-wrap
+		display: inline-block
 	&__input
 		width: 0
 		opacity: 0
@@ -35,11 +37,13 @@
 		padding: 10px 15px
 		color: $indigo
 		background-color: $input-bg
-		transition: width .3s
+		transition: width .3s, opacity .3s, visibility .3s
 		position: relative
 		left: 30px
 		+placeholder
 			color: $indigo
+			&:focus
+				font-size: 0
 	&__icon
 		position: relative
 		top: 4px
@@ -69,14 +73,11 @@
 	&__link
 		+hover
 			color: $accent
-			// .lang__arrow
-			// 	+arr(8, 5, $accent, b)
 	&__current
 		border-bottom: 1px dotted $indigo
 		position: relative
 		display: inline-block
 		width: 30px
-		margin-bottom: 5px
 		+hover
 			color: $indigo
 	&__arrow
@@ -87,6 +88,7 @@
 		transform: translateY(-50%)
 	&__list
 		display: none
+		margin-top: 5px
 		position: absolute
 		z-index: 2
 		background-color: #ebeef1

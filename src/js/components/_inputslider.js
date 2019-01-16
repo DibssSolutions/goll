@@ -1,5 +1,5 @@
 import noUiSlider from 'nouislider';
-import {OPEN} from '../constants';
+import {OPEN, OVERFLOW_HIDDEN, BODY} from '../constants';
 
 var toggleSlider = document.querySelector('.input-slider');
 
@@ -14,6 +14,7 @@ noUiSlider.create(toggleSlider, {
 var popupVideo = $('.js-popup-video');
 function openPopup() {
   popupVideo.toggleClass(OPEN);
+  BODY.toggleClass(OVERFLOW_HIDDEN);
 }
 
 toggleSlider.noUiSlider.on('slide', function() {
