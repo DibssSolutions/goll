@@ -20,6 +20,10 @@
 							<button type="button" class="specialization_popup__button button button_close"></button>
 						</a>
 					</div>
+					<div class="popup__description">
+						<p>{{item.text}}</p>
+						<button class="specialization_popup__overlay-button button button_border" type="button">Подробнее</button>
+					</div>
 					<div class="popup__features">
 					{% for feature in item.features %}
 						<div class="features">
@@ -29,7 +33,7 @@
 										<div class="features__img" style="background-image: url('/img/{{feature.features_img}}.png')"></div>
 									</div>
 								</div>
-								<h3 class="features__title title_sm">{{feature.features_title}}</h3>
+								<h3 class="features__title title_sm">{{feature.features_title | safe}}</h3>
 							</a>
 						</div>
 					{% endfor %}

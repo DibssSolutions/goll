@@ -63,10 +63,16 @@
 	transition: border-color .3s, transform .3s
 	+hover
 		transform: scale(1.1)
+		+sm
+			transform: scale(1)
 		.specialization__img-border
 			border-color: transparent
+			+sm
+				border-color: $indigo
 			&:before, &:after
 				opacity: 1
+				+sm
+					display: none
 		.specialization__title
 			color: $accent
 	& .specialization__img-border
@@ -90,6 +96,8 @@
 		background-color: rgba(64, 91, 113, 0.7)
 		color: $white
 		font-size: 16px
+		+sm
+			display: none
 	&__overlay-inner
 		+vcenter
 		width: 300px
@@ -98,26 +106,61 @@
 	&__button
 		top: -35px
 		right: 130px
+		+sm
+			top: -8px
+			right: -50px
 	& .specialization__link
 		padding: 0 75px
 		position: relative
+		+sm
+			padding: 0
 	& .specialization__img-wrap
 		+circle(437)
+		+sm
+			width: 100%
+			height: 100%
+			max-width: 400px
+			max-height: 400px
 	& .specialization__img-border
 		&:before
 			width: 400px
 			height: 165px
 			top: 280px
 			left: -28px
+			+sm
+				width: 90%
+				height: 40%
+				top: 70%
+				left: 0%
 		&:after
 			width: 420px
 			height: 510px
 			top: -60px
 			left: 40px
+			+sm
+				width: 90%
+				height: 110%
+				top: -4%
+				left: 17%
 	& .specialization__img
 		height: 500px
+		+sm
+			height: 100px
+			padding-bottom: 100%
+			width: 100%
 	& .specialization__title
 		color: $accent
 		margin-top: 90px
+		+sm
+			color: $indigo-title
+			font-size: 16px
+			margin-top: 40px
+	+sm
+		position: static
+		width: 100%
+		padding: 0 30px
+		max-width: 450px
+		max-height: 450px
+		margin: 0 auto 50px
 
 // Popup modifier

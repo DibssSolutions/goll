@@ -13,6 +13,9 @@
 		+hover
 			color: $indigo
 			background-color: $white
+		+sm
+			color: $indigo
+			border-color: $indigo
 	&_close
 		position: absolute
 		+circle(63)
@@ -21,6 +24,8 @@
 		background-repeat: no-repeat
 		background-position: center
 		cursor: pointer
+		+sm
+			+circle(52)
 		&_small
 			+circle(43)
 			background-image: url('/img/close-small.svg')

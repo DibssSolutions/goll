@@ -11,6 +11,11 @@
 	justify-content: center
 	background-color: rgba(235, 238, 240, 0.9)
 	z-index: 5
+	+sm
+		bottom: auto
+		height: 100vh
+		align-items: flex-start
+		overflow: auto
 	&__container
 		max-width: 1100px
 		width: 100%
@@ -18,7 +23,15 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		+sm
+			height: auto
+			align-items: flex-start
+			padding: 100px 40px
 	&__wrap
+		+sm
+			width: 100%
+			height: auto
+			position: static
 		+pseudo
 		&:before
 			background-image: url('/img/left-line.svg')
@@ -28,6 +41,8 @@
 			height: 278px
 			top: 65px
 			pointer-events: none
+			+sm
+				display: none
 		&:after
 			background-image: url('/img/right-line.svg')
 			// background-size: 100%
@@ -37,6 +52,8 @@
 			left: 510px
 			top: 65px
 			pointer-events: none
+			+sm
+				display: none
 		[data-length-features="5"] &, [data-length-features="4"] &, [data-length-features="3"] &
 			&:before
 				background-image: url('/img/small-left-line.svg')
@@ -62,6 +79,10 @@
 			&:before
 				display: none
 	&__features
+		+sm
+			margin-top: 40px
+		+ms
+			margin: 40px -25px 0
 
 [data-modal]
 	opacity: 0
