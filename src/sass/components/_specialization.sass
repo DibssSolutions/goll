@@ -1,7 +1,13 @@
 .specialization
 	text-align: center
+	+sm
+		width: 50%
+		margin-bottom: 50px
+		padding: 0 15px
 	&__link
 		display: inline-block
+		+sm
+			display: block
 	&__img-border
 		+circle(390)
 		margin: 0 auto
@@ -24,19 +30,32 @@
 			left: 60px
 			top: -27px
 			pointer-events: none
+		+sm
+			height: auto
+			width: 100%
+			padding-bottom: 100%
 	&__img-wrap
 		+vcenter
 		+circle(364)
 		overflow: hidden
+		+sm
+			width: 95%
+			height: 95%
 	&__img
 		background-repeat: no-repeat
 		background-position: center
 		background-size: cover
 		height: 400px
+		+sm
+			height: 100px
+			width: 100%
+			padding-bottom: 110%
 	&__title
 		margin-top: 30px
 		+tr(color 300ms)
 		text-transform: uppercase
+		+sm
+			margin-top: 15px
 
 
 // Slider modifier

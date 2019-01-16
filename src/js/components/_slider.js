@@ -15,8 +15,9 @@ $slider.slick({
     }
   ]
 });
-	
-$slider.on('wheel', (function(e) {
+
+var slickSlider = $('.slick-slider');
+slickSlider.on('wheel', (function(e) {
   var $that = $(this);
   e.preventDefault();
   if (e.originalEvent.deltaY < 0) {
@@ -25,3 +26,4 @@ $slider.on('wheel', (function(e) {
     $that.slick('slickNext');
   }
 }));
+
