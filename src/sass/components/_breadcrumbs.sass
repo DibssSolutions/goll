@@ -1,0 +1,18 @@
+.breadcrumbs
+	display: flex
+	&__item
+		+f(12px, 500)
+		&:not(:last-child)
+			margin-right: 20px
+		& a
+			border-bottom: 1px solid $indigo
+			color: $indigo-title
+			position: relative
+			&:after
+				content: ''
+				+circle(4)
+				background-color: #a1bdd3
+				+vcenter
+				left: calc(100% + 10px)
+		& span
+			opacity: .8

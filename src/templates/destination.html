@@ -1,29 +1,25 @@
 ---
-title: Glosav
+title: Destination
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 
 	<!-- HEADER -->
-	{{header.block()}}
+	{{header.block({class: 'header_absolute'})}}
 	<!-- HEADER -->
 
-	<!-- MAIN -->
-	{% include "partials/_main.html" %}
-	<!-- MAIN -->
+	<!-- DESTINATION -->
+	{% include "partials/_destination.html" %}
+	<!-- DESTINATION -->
+
+	<!-- ARTICLE -->
+	{% include "partials/_article.html" %}
+	<!-- ARTICLE -->
 
 	<!-- FOOTER -->
 	{% include "partials/_footer.html" %}
 	<!-- FOOTER -->
-
-	<!-- MODAL -->
-	{% include "partials/_modal.html" %}
-	<!-- MODAL -->
-
-	<!-- POPUP VIDEO -->
-	{% include "partials/_popup-video.html" %}
-	<!-- POPUP VIDEO -->
 
 	<!-- LOGIN FORM -->
 	{% include "partials/_login.html" %}

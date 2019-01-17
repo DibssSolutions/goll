@@ -1,5 +1,7 @@
-<header class="header js-header">
-	<div class="header__container container">
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(prop) %}
+<header class="header {% if prop.class %}{{prop.class}}{% endif %} js-header">
+		<div class="header__container container">
 		<a href="#" class="header__logo">
 			<img src="./img/logo.png" alt="Glosav" class="header__logo-img js-logo">
 			<img src="./img/logo-white.png" alt="Glosav" class="header__logo-img_sm js-logo">
@@ -55,3 +57,4 @@
 		</div>
 	</div>
 </header>
+{% endmacro %}
