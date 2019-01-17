@@ -42,19 +42,19 @@
 		left: 30px
 		+placeholder
 			color: $indigo
-			&:focus
-				font-size: 0
+		&:focus::placeholder
+			font-size: 0
+		&.is-open
+			width: 280px
+			opacity: 1
+			visibility: visible
+			+ms
+				width: 250px
 	&__icon
 		position: relative
 		top: 4px
 	+md
 		margin-right: 0
-.search__input_open
-	width: 280px
-	opacity: 1
-	visibility: visible
-	+ms
-		width: 250px
 
 
 
@@ -95,6 +95,8 @@
 		width: 44px
 		height: 54px
 		left: -10px
+		&.is-open
+			display: block
 	&__item
 		margin-top: 8px
 		margin-left: 10px

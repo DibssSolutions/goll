@@ -1,7 +1,7 @@
 import noUiSlider from 'nouislider';
 import {OPEN, OVERFLOW_HIDDEN, BODY} from '../constants';
 
-var toggleSlider = document.querySelector('.input-slider');
+var toggleSlider = document.querySelector('.js-input-slider');
 
 noUiSlider.create(toggleSlider, {
   start: 0,
@@ -21,7 +21,7 @@ toggleSlider.noUiSlider.on('slide', function() {
   setTimeout(openPopup, 200);
 });
 
-var video = $('.popup-video__video');
+var video = $('.js-popup-video__video');
 popupVideo.on('click', function() {
   var this_ = $(this);
   this_.removeClass(OPEN);

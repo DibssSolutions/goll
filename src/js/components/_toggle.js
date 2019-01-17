@@ -1,4 +1,4 @@
-import {OPEN} from '../constants.js';
+import {OPEN, BODY} from '../constants.js';
 
 var burger = $('.js-toggle');
 var burgerIcon = $('.js-toggle-icon');
@@ -8,13 +8,12 @@ burger.on('click', function() {
   menu.toggleClass(OPEN);
 });
 
-var out = $('.out');
-out.on('click', function() {
+BODY.on('click', function() {
   menu.removeClass(OPEN);
   burgerIcon.removeClass(OPEN);
 });
 
-var header = $('.header');
+var header = $('.js-header');
 header.on('click', function(e) {
   e.stopPropagation();
 });

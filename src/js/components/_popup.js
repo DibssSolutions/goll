@@ -20,7 +20,7 @@ popup.on('click', function(e) {						// событие клика по блок�
   }
 });
 
-var close = $('.specialization_popup__button');
+var close = $('.js-specialization-popup-button');
 close.on('click', function() {
   popup.trigger('click');
 });
