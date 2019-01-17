@@ -19,12 +19,25 @@
       <header class="header js-header">
         <div class="header__container container">
           <a href="#" class="header__logo">
-            <img src="./img/logo.png" alt="Glosav" class="header__logo-img">
+            <img src="./img/logo.png" alt="Glosav" class="header__logo-img js-logo">
+            <img src="./img/logo-white.png" alt="Glosav" class="header__logo-img_sm js-logo">
           </a>
           <div class="header__toggle js-toggle">
             <div class="header__toggle-icon js-toggle-icon"></div>
           </div>
           <div class="header__menu menu js-menu">
+            <div class="menu__search search_sm">
+              <form action="" autocomplete="on" class="search_sm__form js-search-form">
+                <div class="search_sm__input-wrap">
+                  <input type="text" class="search_sm__input">
+                </div>
+                <button type="submit" class="search_sm__icon button">
+                  <svg class="icon icon-search">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
             <div class="menu__top">
               <div class="menu__search search">
                 <form action="" autocomplete="on" class="search__form js-search-form">

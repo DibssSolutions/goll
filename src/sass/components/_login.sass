@@ -3,9 +3,14 @@
 	visibility: hidden
 	opacity: 0
 	transition: opacity .3s, visibility .3s
+	+sm
+		align-items: center
 	&__container
 		position: relative
 		padding: 30px
+		+sm
+			padding: 30px
 	&.is-open
 		visibility: visible
 		opacity: 1
+		align-items: center

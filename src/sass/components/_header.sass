@@ -1,5 +1,6 @@
 .header
 	padding: 20px 0
+	// transition: background-color .3s
 	+md
 		height: 100%
 	&__container
@@ -11,18 +12,27 @@
 		width: 239px
 		+ms
 			width: 130px
+	&__logo-img_sm
+		display: none
+		width: 239px
+		+ms
+			width: 130px
 	&__menu
 		margin-left: auto
+		transition: visibility 1s, opacity 1s
 		+md
-			display: none
-			width: 100%
+			position: absolute
+			visibility: hidden
+			opacity: 0
+			top: -200%
 		&.is-open
-			display: flex
+			position: static
+			visibility: visible
+			opacity: 1
+			width: 100%
 			+ms
 				flex-wrap: wrap
 				margin-bottom: 20px
-
-
 
 
 .header__toggle
@@ -58,6 +68,49 @@
 		&:before
 			+rotate(45)
 			top: 0
+			background-color: $white
 		&:after
 			+rotate(-45)
 			bottom: 0
+			background-color: $white
+
+.header.is-open
+	background-color: $indigo-title
+	color: $white
+	height: 100vh
+	overflow: auto
+	position: absolute
+	z-index: 5
+	top: 0
+	left: 0
+	width: 100%
+	.header__logo-img
+		display: none
+	.header__logo-img_sm
+		display: block
+	.header__menu
+		flex-wrap: wrap
+	.menu__bot
+		width: 100%
+	.nav
+		&__link
+			color: $white
+	.lang
+		display: flex
+		&__current
+			border: none
+			margin-right: 10px
+		&__arrow
+			display: none
+		&__list
+			display: flex
+			position: static
+			background-color: transparent
+			margin: 0
+			width: 100%
+			height: auto
+		&__item
+			margin: 0
+			margin-right: 15px
+		&__link
+			color: $white
