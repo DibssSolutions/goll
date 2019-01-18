@@ -1,3 +1,11 @@
+{% set company = ['sber', 'huawei', 'gazprom', 'dell', 'alfabank', 'google', 'skbank', 'apple', 'mts', 'intel'] %}
 <section class="companies">
-	
+	<div class="companies__container container">
+		<h2 class="companies__title title-l">Кто уже воспользовался</h2>
+		<div class="companies__list">
+			{% for item in company %}
+			    <a href="#" class="companies__company" style="background-image: url('./img/{{item}}.png')"></a>
+			{% endfor %}
+		</div>
+	</div>
 </section>
