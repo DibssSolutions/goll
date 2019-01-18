@@ -1,0 +1,23 @@
+{% import 'data/integration-slider.html' as data %}
+<section class="integration-slider">
+	<div class="integration-slider__container container">
+		<h2 class="integration-slider__title title-l">Примеры внедрений</h2>
+		<div class="integration-slider__slider slider-small">
+			<ul class="slider-small__list js-slider-small">
+				{% for item in data.integration_item %}
+				    <li class="slider-small__item">
+				    	<a href="#" class="slider-small__link">
+				    		<div class="slider-small__img-wrap">
+				    			<div class="slider-small__img" style="background-image: url('./img/truck.png')"></div>
+				    		</div>
+				    		<h4 class="slider-small__title title-s">{{item.title}}</h4>
+				    	</a>
+				    </li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="integration-slider__button">
+			<button type="button" class="button button_border js-unslick" data-btn-hide="Скрыть" data-btn-show="Смотреть все решения">Смотреть все решения</button>
+		</div>
+	</div>
+</section>

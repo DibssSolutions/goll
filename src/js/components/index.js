@@ -6,3 +6,4 @@ import './_inputslider';
 import './_login-form';
 import './_toggle';
 import './_article';
+import './_integration-slider';

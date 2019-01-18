@@ -1,0 +1,107 @@
+.integration-slider
+	margin-top: -35px
+	&__container
+		max-width: 1192px
+		// overflow: hidden
+	&__title
+		color: $indigo-title
+		padding-bottom: 40px
+	&__button
+		text-align: center
+		margin-top: 40px
+		& button
+			+hover
+				color: $white
+				background-color: $indigo
+
+.slider-small
+	text-align: center
+	&__list
+		position: relative
+		white-space: nowrap
+		overflow: hidden
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		&.slick-initialized,
+		&.is-active
+			opacity: 1
+			visibility: visible
+			overflow: visible
+			white-space: normal
+		&.is-active
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+	&__item
+		display: inline-block
+		.slider-small__list.is-active &
+			width: calc(25% - 53px)
+			margin-bottom: 55px
+			&:not(:nth-child(4), :last-child)
+				margin-right: 70px
+	&__link
+		+hover
+			.slider-small__title
+				color: $accent
+		.slider-small__list.is-active &
+			display: inline-block
+	&__img-wrap
+		+circle(232)
+		overflow: hidden
+		margin: 0 auto
+	&__img
+		height: 235px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+	&__title
+		margin-top: 35px
+		transition: color .3s
+
+	.slick-arrow
+		background-color: transparent
+		position: absolute
+		z-index: 2
+		top: 115px
+		+hover
+			span
+				background-color: $accent
+		&:before
+			position: absolute
+			content: ''
+			top: -15px
+			bottom: -15px
+			left: 0
+			right: 0
+		& span
+			display: inline-block
+			width: 60px
+			height: 1px
+			background-color: $indigo
+			position: relative
+			top: -4px
+			transition: background-color .3s
+			&:before
+				content: ''
+				position: absolute
+				top: -4.5px
+				left: -8px
+				+arr(9, 9, $indigo, l)
+				transition: border-color .3s
+	.slick-prev
+		left: 0
+		+hover
+			span
+				&:before
+					+arr(9, 9, $accent, l)
+	.slick-next
+		right: 0
+		+hover
+			span
+				&:before
+					+arr(9, 9, $accent, r)
+		& span
+			&:before
+				+arr(9, 9, $indigo, r)
+				left: 60px

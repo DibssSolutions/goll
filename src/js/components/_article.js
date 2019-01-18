@@ -1,10 +1,10 @@
-import {OPEN} from '../constants.js';
+import {ACTIVE} from '../constants.js';
 
 var arrBtn = $('.js-button-arrow');
-var article = $('.js-article');
+var drop = $('.js-drop-text');
 
 arrBtn.on('click', function() {
   var this_ = $(this);
-  article.css('max-height', 'none');
-  this_.css('background-image', "url('../img/arr-up.svg')");
+  drop.slideToggle('300');
+  this_.toggleClass(ACTIVE);
 });
