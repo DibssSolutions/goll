@@ -1,0 +1,72 @@
+.request
+	background-color: $request
+	padding: 60px 0
+	&__container
+		max-width: 1192px
+		display: flex
+		justify-content: space-between
+	&__form
+		width: 50%
+		padding-right: 95px
+	&__text
+		width: 50%
+	&__title
+		padding-bottom: 40px
+		color: $indigo-title
+
+.input-wrap
+	margin-bottom: 37px
+	width: 100%
+
+.request-form
+	max-width: 520px
+	&__textarea
+		border: none
+	&__img
+		width: 302px
+		display: block
+		margin-bottom: 37px
+	&__button
+		min-width: 202px
+	&__select
+	& .select2-container--default .select2-selection--single
+		background-color: $request-input
+		border: none
+		border-radius: 30px
+		height: auto
+	& .select2-container--default .select2-selection--single .select2-selection__rendered
+		color: $indigo
+		line-height: 1
+	& .select2-container .select2-selection--single .select2-selection__rendered
+		padding: 20px 40px 20px 25px
+	& .select2-container--default .select2-selection--single .select2-selection__arrow b
+		border: none
+	& .select2-container--default .select2-selection--single .select2-selection__arrow
+		height: 8px
+		width: 13px
+		background-image: url('../img/select-arr.svg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 23px
+.select2-dropdown.select2-dropdown--below
+	background-color: $request-input
+	border: none
+
+
+.input
+	width: 100%
+	padding: 20px 25px
+	background-color: $request-input
+	border-radius: 30px
+	font-family: $gotham
+	font-size: 14px
+	color: $indigo
+	&:focus::placeholder
+		font-size: 0
+	+placeholder
+		font-size: 14px
+		color: $indigo
