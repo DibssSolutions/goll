@@ -13,6 +13,8 @@
 			+hover
 				color: $white
 				background-color: $indigo
+	+sm
+		margin-top: 80px
 
 .slider-small
 	text-align: center
@@ -36,10 +38,9 @@
 	&__item
 		display: inline-block
 		.slider-small__list.is-active &
-			width: calc(25% - 53px)
+			width: 230px
 			margin-bottom: 55px
-			&:not(:nth-child(4), :last-child)
-				margin-right: 70px
+			margin: 35px
 	&__link
 		+hover
 			.slider-small__title

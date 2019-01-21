@@ -5,14 +5,27 @@
 		max-width: 1192px
 		display: flex
 		justify-content: space-between
+		+sm
+			flex-wrap: wrap
 	&__form
 		width: 50%
 		padding-right: 95px
+		+sm
+			width: 100%
+			order: 2
+			padding-right: 0
 	&__text
 		width: 50%
+		+sm
+			width: 100%
+			margin-bottom: 30px
 	&__title
 		padding-bottom: 40px
 		color: $indigo-title
+		+sm
+			padding-bottom: 25px
+	+sm
+		padding: 40px 0
 
 .input-wrap
 	margin-bottom: 37px
@@ -20,12 +33,16 @@
 
 .request-form
 	max-width: 520px
+	+sm
+		margin: 0 auto
 	&__textarea
 		border: none
 	&__img
 		width: 302px
 		display: block
 		margin-bottom: 37px
+		+sm
+			width: 280px
 	&__button
 		min-width: 202px
 	&__select
@@ -52,6 +69,7 @@
 		top: 50%
 		transform: translateY(-50%)
 		right: 23px
+
 .select2-dropdown.select2-dropdown--below
 	background-color: $request-input
 	border: none
