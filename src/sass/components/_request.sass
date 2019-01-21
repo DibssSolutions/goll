@@ -55,6 +55,17 @@
 .select2-dropdown.select2-dropdown--below
 	background-color: $request-input
 	border: none
+	border-radius: 0 0 30px 30px
+	padding-bottom: 10px
+.select2-results__option
+	padding-left: 25px
+	&:not(:last-child)
+		margin-bottom: 20px
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	color: $indigo
+	background-color: transparent
+	+hover
+		color: $indigo-title
 
 
 .input

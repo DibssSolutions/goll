@@ -1,4 +1,6 @@
-<footer class="footer">
+{% import "partials/_mixins.html" as mixins %}
+{% macro footer(prop) %}
+<footer class="footer {% if prop.class %}{{prop.class}}{% endif %}">
 	<div class="footer__container container">
 		<div class="footer__copy">ООО “Глосав”. Все права защищены</div>
 		<ul class="footer__contacts contacts">
@@ -23,3 +25,4 @@
 		</ul>
 	</div>
 </footer>
+{% endmacro %}

@@ -2,4 +2,6 @@ import select2 from 'select2';
 
 var select = $('.js-select');
 
-select.select2();
+select.select2({
+  minimumResultsForSearch: Infinity
+});
