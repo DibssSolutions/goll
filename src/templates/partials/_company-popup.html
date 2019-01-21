@@ -1,0 +1,14 @@
+{% import "data/company.html" as data %}
+{% for item in data.company %}
+<div class="company-popup popup" data-modal="{{item.name}}">
+    <div class="company-popup__container popup__container container">
+        <div class="company js-popup-wrap">
+            <img src="./img/{{item.name}}.png" alt="{{item.name}}" class="company__img">
+            <h3 class="company__title title-l">{{item.name}}</h3>
+            <p class="title-sm">{{item.title}}</p>
+            <p>{{item.description}}}</p>
+            <button type="button" class="company__close button button_close_transparent js-button-close"></button>
+        </div>
+    </div>
+</div>
+{% endfor %}

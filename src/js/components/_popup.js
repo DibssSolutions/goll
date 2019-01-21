@@ -20,10 +20,12 @@ popup.on('click', function(e) {						// событие клика по блок�
   }
 });
 
-var close = $('.js-specialization-popup-button');
+var close = $('.js-specialization-popup-button, .js-button-close');
 close.on('click', function() {
   popup.trigger('click');
 });
+
+
 
 
 $('[data-modal]').each(function() {
