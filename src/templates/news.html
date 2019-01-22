@@ -1,0 +1,28 @@
+---
+title: News
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block()}}
+	<!-- HEADER -->
+	
+	<!-- TOP -->
+	{% include "partials/_news-top.html" %}
+	<!-- TOP -->
+	
+	<!-- NEWS -->
+	{% include "partials/_news.html" %}
+	<!-- NEWS -->
+	
+	<!-- FOOTER -->
+	{{footer.footer({class: 'footer_bg'})}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}

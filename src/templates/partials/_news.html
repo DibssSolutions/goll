@@ -1,0 +1,29 @@
+{% import "data/news.html" as data %}
+<section class="news">
+    <div class="news__container container">
+        <div class="news__select">
+            <select name="news" class="select js-select" style="width: 280px">
+                <option value="1" class="select__option">Новости по всем направлениям</option>
+                <option value="2" class="select__option">Мониторинг и тахография</option>
+                <option value="3" class="select__option">Итс</option>
+                <option value="4" class="select__option">Разработка ПО</option>
+            </select>
+        </div>
+        <ul class="news__grid grid">
+        {% for item in data.news %}
+            <li class="grid__item grid__item-{% if item.size %}{{item.size}}{% endif %} ">
+                <div class="news-item {% if item.class %}{{item.class}}{% endif %}">
+                    <div class="news-item__container">
+                        <div class="news-item__img" style="background-image: url('./img/{{item.img}}.png')"></div>
+                        <p>{{item.text}}</p>
+                    </div>
+                    <div class="news-item__aside" {% if item.class %}style="background-image: url('./img/{{item.img}}.png')"{% endif %}>
+                        <p>{{item.text}}</p>
+                        <a href="#" class="news-item__link">Подробнее</a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
