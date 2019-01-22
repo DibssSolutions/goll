@@ -1,10 +1,13 @@
 import {ACTIVE} from '../constants.js';
 
-var arrBtn = $('.js-button-arrow');
-var drop = $('.js-drop-text');
+var dropParent = $('.js-drop-parent');
 
-arrBtn.on('click', function() {
-  var this_ = $(this);
-  drop.slideToggle('300');
-  this_.toggleClass(ACTIVE);
+
+dropParent.each(function() {
+  var arrBtn = $(this).find('.js-button-arrow');
+  var drop = $(this).find('.js-drop-text');
+  arrBtn.on('click', function() {
+    drop.slideToggle('300');
+    arrBtn.toggleClass(ACTIVE);
+  });
 });

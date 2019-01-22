@@ -15,3 +15,15 @@
 		+tr(color 200ms)
 		+hover
 			color: $accent
+	&__link_current
+		color: $accent
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 4px
+			height: 4px
+			background-color: $accent
+			left: 50%
+			transform: translateX(-50%)
+			top: -10px

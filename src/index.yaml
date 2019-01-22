@@ -4,4 +4,4 @@ PageList:
 - file: page.html
   ready: 100
 - file: destination.html
-  ready: 10
+  ready: 100

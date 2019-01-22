@@ -39,21 +39,25 @@ var slickOptions = {
 
 sliderSmall.slick(slickOptions);
 
+var sliderParent = $('.js-slider-parent');
 
-
-unslick.on('click', function() {
-  var this_ = $(this);
-  var dataHide = $('[data-btn-hide]');
-  var dataHideID = dataHide.data('btn-hide');
-  var dataShow = $('[data-btn-show]');
-  var dataShowID = dataShow.data('btn-show');
-  if (!sliderSmall.hasClass(ACTIVE)) {
-    sliderSmall.slick('unslick');
-    sliderSmall.addClass(ACTIVE);
-    this_.text(dataHideID);
-  } else {
-    sliderSmall.slick(slickOptions);
-    sliderSmall.removeClass(ACTIVE);
-    this_.text(dataShowID);
-  }
+sliderParent.each(function() {
+  var unslickChild = $(this).find('.js-unslick');
+  var sliderChild = $(this).find('.js-slider-small');
+  unslickChild.on('click', function() {
+    var dataHide = $('[data-btn-hide]');
+    var dataHideID = dataHide.data('btn-hide');
+    var dataShow = $('[data-btn-show]');
+    var dataShowID = dataShow.data('btn-show');
+    if (!sliderChild.hasClass(ACTIVE)) {
+      sliderChild.slick('unslick');
+      sliderChild.addClass(ACTIVE);
+      unslickChild.text(dataHideID);
+    } else {
+      sliderChild.slick(slickOptions);
+      sliderChild.removeClass(ACTIVE);
+      unslickChild.text(dataShowID);
+    }
+  });
 });
+

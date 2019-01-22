@@ -37,6 +37,7 @@
 		margin: 0 auto
 	&__textarea
 		border: none
+		resize: none
 	&__img
 		width: 302px
 		display: block
@@ -77,13 +78,17 @@
 	padding-bottom: 10px
 .select2-results__option
 	padding-left: 25px
+	opacity: 0.7
 	&:not(:last-child)
 		margin-bottom: 20px
 .select2-container--default .select2-results__option--highlighted[aria-selected]
 	color: $indigo
 	background-color: transparent
+	opacity: 1
 	+hover
 		color: $indigo-title
+.select2-container--default .select2-results__option[aria-selected=true]
+	background-color: transparent
 
 
 .input
