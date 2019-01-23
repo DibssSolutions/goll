@@ -6,4 +6,6 @@ PageList:
 - file: destination.html
   ready: 100
 - file: news.html
-  ready: 10
+  ready: 100
+- file: about.html
+  ready: 100

@@ -1,5 +1,5 @@
 ---
-title: News
+title: About
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -9,13 +9,17 @@ title: News
 	{{header.block()}}
 	<!-- HEADER -->
 	
-	<!-- TOP -->
-	{{headline.headline({headline: 'Новости'})}}
-	<!-- TOP -->
-	
-	<!-- NEWS -->
-	{% include "partials/_news.html" %}
-	<!-- NEWS -->
+	<!-- ABOUT TOP -->
+	{{headline.headline({headline: 'О компании'})}}
+	<!-- ABOUT TOP -->
+
+	<!-- ABOUT MAIN -->
+	{% include "partials/_about.html" %}
+	<!-- ABOUT MAIN -->
+
+	<!-- COUNTER -->
+	{% include "partials/_counter.html" %}
+	<!-- COUNTER -->
 	
 	<!-- FOOTER -->
 	{{footer.footer()}}

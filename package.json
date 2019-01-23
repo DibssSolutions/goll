@@ -66,6 +66,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
+    "counterup2": "^1.0.4",
     "nouislider": "^12.1.0",
     "select2": "^4.0.6-rc.1",
     "slick-carousel": "^1.8.1"
