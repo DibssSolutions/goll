@@ -2,27 +2,46 @@
 <section class="news">
     <div class="news__container container">
         <div class="news__select">
-            <select name="news" class="select js-select" style="width: 280px">
-                <option value="1" class="select__option">Новости по всем направлениям</option>
+            <select name="news" class="select js-select-news" style="width: 260px">
+                <option value="" class="select__option"></option>
                 <option value="2" class="select__option">Мониторинг и тахография</option>
                 <option value="3" class="select__option">Итс</option>
                 <option value="4" class="select__option">Разработка ПО</option>
             </select>
+            <div class="news__dropdown"></div>
         </div>
         <ul class="news__grid grid">
         {% for item in data.news %}
-            <li class="grid__item grid__item-{% if item.size %}{{item.size}}{% endif %} ">
-                <div class="news-item {% if item.class %}{{item.class}}{% endif %}">
-                    <div class="news-item__container">
-                        <div class="news-item__img" style="background-image: url('./img/{{item.img}}.png')"></div>
-                        <p>{{item.text}}</p>
-                    </div>
-                    <div class="news-item__aside" {% if item.class %}style="background-image: url('./img/{{item.img}}.png')"{% endif %}>
-                        <p>{{item.text}}</p>
-                        <a href="#" class="news-item__link">Подробнее</a>
+        {% if item.modifier %}
+        <li class="grid__item grid__item-{{item.size}} ">
+            {% for modifier in item.modifier %}
+                <div class="news-item triple">
+                    <div class="triple__block">
+                        <div class="triple__img" style="background-image: url('./img/{{modifier.img}}.png')"></div>
+                        <div class="triple__text">
+                            <p>{{modifier.text}}</p>
+                            <div class="triple__aside">
+                                <a href="#" class="triple__link">Подробнее</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </li>
+            {% endfor %}
+        </li>
+        {% else %}
+        <li class="grid__item grid__item-{{item.size}} ">
+            <div class="news-item {% if item.class %}{{item.class}}{% endif %}">
+                <div class="news-item__container">
+                    <div class="news-item__img" style="background-image: url('./img/{{item.img}}.png')"></div>
+                    <p>{{item.text}}</p>
+                </div>
+                <div class="news-item__aside" {% if item.class %}style="background-image: url('./img/{{item.img}}.png')"{% endif %}>
+                    <p>{{item.text}}</p>
+                    <a href="#" class="news-item__link">Подробнее</a>
+                </div>
+            </div>
+        </li>
+        {% endif %}
             {% endfor %}
         </ul>
     </div>

@@ -6,6 +6,43 @@
     &__select
         text-align: right
         margin-bottom: 15px
+        & .select2-container--default .select2-selection--single .select2-selection__placeholder
+            color: $indigo
+            border-bottom: 1px dotted $indigo
+        & .select2-container--default .select2-selection--single
+            border: none
+            background-color: transparent
+            border-radius: 0
+        & .select2-container--default .select2-selection--single .select2-selection__rendered
+            color: $indigo
+            text-align: left
+            padding: 0
+        & .select2-container--default .select2-selection--single .select2-selection__arrow b
+            border: none
+        & .select2-container--default .select2-selection--single .select2-selection__arrow
+            height: 8px
+            width: 13px
+            background-image: url('../img/select-arr.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            position: absolute
+            top: 12px
+            right: 0px
+        & .select2-dropdown.select2-dropdown--below
+            background-color: #fff
+            border: none
+            border-radius: 0
+            text-align: left
+        & .select2-results__option
+            padding: 10px 18px
+        & .select2-container--default .select2-results__option--highlighted[aria-selected]
+            color: $indigo
+            background-color: transparent
+            +hover
+                color: $accent
+        & .select2-container--default .select2-results__option[aria-selected=true]
+            background-color: transparent
 
 .grid
     display: flex
@@ -15,8 +52,12 @@
         padding: 15px
     &__item-25
         width: 25%
+        +md
+            width: 33.3%
     &__item-50
         width: 50%
+        +md
+            width: 33.3%
 
 .news-item
     height: 100%
@@ -37,7 +78,7 @@
     &__aside
         width: 100%
         text-align: right
-        padding: 20px
+        padding: 0 20px 20px 20px
         align-self: flex-end
         & p
             display: none
@@ -46,6 +87,39 @@
         transition: color .3s
         +hover
             color: $accent
+    &.triple
+        // height: 30%
+        height: 118px
+        background-color: transparent
+        &:not(:last-child)
+            margin-bottom: 29px
+.triple
+    &__block
+        background-color: $white
+        display: flex
+    &__img
+        height: 118px
+        width: 198px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        +md
+            display: none
+    &__text
+        & p
+            +md
+            padding-bottom: 0
+    &__aside
+        text-align: right
+        padding-top: 10px
+        padding-right: 10px
+    &__link
+        transition: color .3s
+        +hover
+            color: $accent
+        
+        
+    
 .news-item_full
     display: block
     .news-item__container
