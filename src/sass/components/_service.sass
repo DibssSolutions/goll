@@ -1,20 +1,36 @@
 .service
     display: flex
     justify-content: space-between
-    align-items: center
+    +sm
+        flex-wrap: wrap
     &__text
         max-width: 680px
+        margin-right: 40px
         & p
             line-height: 1.4
+        +sm
+            order: 2
+            margin-right: 0
     &__img
         background-size: cover
         background-repeat: no-repeat
         background-position: center
         width: 375px
         max-width: 375px
-        min-height: 375px
+        height: 100px
+        padding-bottom: 33.2%
         border-radius: 50%
         overflow: hidden
+        +sm
+            margin: 0 auto
+            padding: 0
+            height: 375px
+            margin-bottom: 30px
+        +ms
+            height: auto
+            padding-bottom: 100%
+            width: 100%
+            max-width: none
     &__list
         margin-top: 40px
         margin-left: 25px

@@ -9,3 +9,4 @@ import './_article';
 import './_integration-slider';
 import './_select2';
 import './_counter';
+import './_nav';

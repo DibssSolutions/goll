@@ -9,9 +9,15 @@
 .counter
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     &__item
-        width: 25%
+        width: 280px
         display: flex
+        margin-bottom: 35px
+        &:not(:last-child)
+            margin-right: 20px
     &__number
         +f(80px, 700, 0.8)
         margin-right: 30px
+        +sm
+            font-size: 60px

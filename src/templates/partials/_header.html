@@ -1,8 +1,9 @@
 {% import "partials/_mixins.html" as mixins %}
+{% import "data/nav.html" as data %}
 {% macro block(prop) %}
 <header class="header {% if prop.class %}{{prop.class}}{% endif %} js-header">
 		<div class="header__container container">
-		<a href="#" class="header__logo">
+		<a href="http://localhost:8080/page.html" class="header__logo">
 			<img src="./img/logo.png" alt="Glosav" class="header__logo-img js-logo">
 			<img src="./img/logo-white.png" alt="Glosav" class="header__logo-img_sm js-logo">
 		</a>
@@ -45,10 +46,9 @@
 			<div class="menu__bot">
 				<nav class="menu__nav nav">
 					<ul class="nav__list">
-						{% set nav = ['О компании', 'Направления', 'Продукты', 'Новости', 'Контакты'] %}
-						{% for item in nav %}
+						{% for item in data.nav %}
 						    <li class="nav__item">
-						    	<a href="#" class="nav__link">{{item}}</a>
+						    	<a href="{{item.link}}" class="nav__link js-nav-link">{{item.name}}</a>
 						    </li>
 						{% endfor %}
 					</ul>
