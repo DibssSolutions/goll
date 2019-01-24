@@ -1,0 +1,16 @@
+{% import "data/products.html" as data %}
+<section class="products-wrap">
+    <div class="products-wrap__container container container_sm">
+        <div class="products grid">
+            {% for item in data.product %}
+                <div class="products__item grid__item">
+                    <a href="#" class="products__link">
+                        <div class="products__inner" style="background-image: url('./img/{{item.img}}.png')">
+                            <h2 class="products__title title-l">{{item.title}}</h2>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

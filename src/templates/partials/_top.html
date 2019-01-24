@@ -1,13 +1,24 @@
-{% import "partials/_mixins.html" as mixins %}
 {% macro headline(prop) %}
 <section class="top">
-    <div class="top__container container">
+    <div class="top__container container container_sm">
         <div class="top__wrap">
             <h1 class="top__title title-main">{% if prop.headline %}{{prop.headline}}{% endif %}</h1>
             <div class="top__breadcrumbs">
-                {{mixins.breadcrumbs({
-                    list: ['Главная', 'Новости']
-                })}}
+                <!-- begin breadcrumbs -->
+                <ul class="breadcrumbs{% if props.class %}{{ props.class }}{% endif %}">
+                    {% for item in prop.list %}
+                        {% if loop.last %}
+                        <li class="breadcrumbs__item">
+                            <span>{{ item }}</span>
+                        </li>
+                        {% else %}
+                        <li class="breadcrumbs__item">
+                            <a href="#">{{ item }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <!-- end breadcrumbs -->
             </div>
         </div>
     </div>
