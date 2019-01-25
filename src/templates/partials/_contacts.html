@@ -1,0 +1,35 @@
+{% import "data/contacts.html" as data %}
+<section class="department-block">
+    <div class="department-block__container container container_sm">
+        <div class="department-block__main">
+            <h4 class="department-block__subtitle title-s">Адрес:</h4>
+            <p>115114, Московская область, г. Москва, Кожевнический проезд, д.1</p>
+            <a href="#" class="department-block__link">Схема проезда</a>
+        </div>
+        <div class="department-block__main">
+            <h4 class="department-block__subtitle title-s">Многоканальний:</h4>
+            <a href="tel:+7(495)6443359" class="department__link">+7 (495) 644 33 59</a>
+        </div>
+    </div>
+    {% for item in data.contacts %}
+        <div class="department-wrap">
+            <div class="department">
+                <h2 class="department__title title-l">{{item.title}}</h2>
+                <div class="department__info">
+                    {% for option in item.option %}
+                    <div class="department__contact">
+                        <h4 class="department__subtitle title-s">{{option.name}}</h4>
+                        {% if option.text %}
+                            <span class="department__span">{{option.text}}</span>
+                        {% elseif option.tel %}
+                            <a href="tel:{{option.tel}}" class="department__link">{{option.tel}}</a>
+                        {% elseif option.mail %}
+                            <a href="mailto:{{option.mail}}" class="department__link">{{option.mail}}</a>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>

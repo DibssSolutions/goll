@@ -1,0 +1,38 @@
+---
+title: Contacts
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block()}}
+	<!-- HEADER -->
+	
+	<!-- TOP -->
+	{{headline.headline(
+		{
+			headline: 'Контакты ',
+			list: ['Главная', 'Контакты']
+		}
+		)}}
+	<!-- TOP -->
+
+	<!-- CONTACTS -->
+	{% include "partials/_contacts.html" %}
+	<!-- CONTACTS -->
+
+	<!-- MAP -->
+	{% include "partials/_map.html" %}
+	<!-- MAP -->
+	
+
+	<!-- FOOTER -->
+	{{footer.footer()}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}

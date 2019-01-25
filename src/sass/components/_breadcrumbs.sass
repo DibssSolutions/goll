@@ -8,11 +8,15 @@
 			border-bottom: 1px solid $indigo
 			color: $indigo-title
 			position: relative
+			transition: color .3s, border-color .3s
 			&:after
 				content: ''
 				+circle(4)
 				background-color: #a1bdd3
 				+vcenter
 				left: calc(100% + 10px)
+			+hover
+				color: $accent
+				border-color: $accent
 		& span
 			opacity: .8
