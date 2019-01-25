@@ -1,0 +1,29 @@
+.service-wrap
+    padding: 0 30px
+    &:nth-child(2n)
+        background-color: $request
+.service_item
+    margin: 0 auto 
+    max-width: 1130px
+    padding: 30px 0
+    &.service
+        +sm
+            flex-wrap: nowrap
+        +xs
+            flex-wrap: wrap
+    & .service__img
+        background-size: contain
+        width: 164px
+        height: 164px
+        padding-bottom: unset
+        background-color: $white
+        margin-right: 80px
+        flex: 0 0 164px
+        +sm
+            margin: 0
+            margin-bottom: 30px
+    & .service__text
+        max-width: none
+        margin: 0
+        & p
+            margin: 35px 0 25px

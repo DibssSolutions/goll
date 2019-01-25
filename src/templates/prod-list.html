@@ -1,0 +1,34 @@
+---
+title: System integration
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block()}}
+	<!-- HEADER -->
+	
+	<!-- ABOUT TOP -->
+	{{headline.headline(
+		{
+			headline: 'Системная интеграция ',
+			list: ['Главная', 'Продукты', 'Системная интеграция ']
+		}
+		)}}
+	<!-- ABOUT TOP -->
+
+	<!-- PROD-LIST -->
+	{% include "partials/_prod-list.html" %}
+	<!-- PROD-LIST -->
+	
+
+	<!-- FOOTER -->
+	{{footer.footer()}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}
