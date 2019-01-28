@@ -1,7 +1,7 @@
 {% macro top_full(prop) %}
-<img src="./img/destination.png" alt="trucks" class="top-full-img">
+<img src="./img/{{prop.img}}.png" alt="trucks" class="top-full-img">
 <div class="top-full">
-	<div class="top-full__bg">
+	<div class="top-full__bg" style="background-image: url('./img/{{prop.img}}.png')">
 		<div class="top-full__container container">
 			<div class="top-full__wrap">
 				<h1 class="top-full__title title-main">{% if prop.headline %}{{prop.headline}}{% endif %}</h1>

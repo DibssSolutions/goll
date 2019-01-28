@@ -1,0 +1,34 @@
+---
+title: Promo
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block({class: 'header_absolute'})}}
+	<!-- HEADER -->
+	
+	<!-- TOP FULL -->
+	{{top_full.top_full(
+		{
+			img:'promo',
+			headline:'Промо-страница',
+			list: ['Главная', 'Продукты и решения', 'Промо-страница']
+		}
+		)}}
+	<!-- TOP FULL -->
+	
+	<!-- PROMO -->
+	{% include "partials/_promo.html" %}
+	<!-- PROMO -->
+	
+	<!-- FOOTER -->
+	{{footer.footer()}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}

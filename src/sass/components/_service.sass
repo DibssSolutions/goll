@@ -3,6 +3,12 @@
     justify-content: space-between
     +sm
         flex-wrap: wrap
+    &__wrap
+        padding: 0 30px
+        max-width: 1190px
+        margin: 0 auto
+        +ms
+            padding: 0 15px
     &__text
         max-width: 680px
         margin-right: 40px
@@ -11,6 +17,9 @@
         +sm
             order: 2
             margin-right: 0
+    &__title
+        color: $indigo-title
+        margin-bottom: 30px
     &__img
         background-size: cover
         background-repeat: no-repeat
@@ -31,6 +40,42 @@
             padding-bottom: 100%
             width: 100%
             max-width: none
+        &_order
+            order: -1
+        &_square
+            border-radius: 0
+        &_contain
+            background-size: contain
     &__list
         margin-top: 40px
         margin-left: 25px
+    &.service_promo
+        align-items: center
+        padding: 30px 0
+        +sm
+            padding: 15px 0
+        & .service__text
+            padding: 0 25px
+            margin: 0
+            +sm
+                padding: 0
+        & .service__img
+            max-width: 401px
+            width: 401px
+            padding-bottom: 35.5%
+            +sm
+                padding-bottom: 0
+                height: 401px
+            +ms
+                height: auto
+                padding-bottom: 100%
+                width: 100%
+                max-width: none
+
+.promo__video.video-wrap
+    padding: 20px 0
+    & .video
+        max-width: none
+        height: 477px
+        +ms
+            height: 200px

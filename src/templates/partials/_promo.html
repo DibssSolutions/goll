@@ -1,0 +1,24 @@
+{% import "data/promo.html" as data %}
+<section class="promo">
+    <!-- <div class="promo__container container container_sm"> -->
+        {% for item in data.promo %}
+            {% if item.video %}
+                <div class="video-wrap {{item.video}}">
+                    <div class="video">
+                        <iframe class="video__item" width="560" height="315" src="https://www.youtube.com/embed/rYaZBtoH_5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            {% else %}
+            <div class="service__wrap">
+                <div class="service service_promo">
+                    <div class="service__text">
+                        <h2 class="service__title title-l">{{item.title}}</h2>
+                        <p>{{item.text}}</p>
+                    </div>
+                    <div class="service__img {% if item.img_mod %}{{item.img_mod}}{% endif %}" style="background-image: url('./img/{{item.img}}.png')"></div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    <!-- </div> -->
+</section>
