@@ -16,4 +16,6 @@ PageList:
 - file: contacts.html
   ready: 100
 - file: promo.html
+  ready: 100
+- file: introduction.html
   ready: 20

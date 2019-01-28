@@ -57,3 +57,13 @@
 		cursor: pointer
 		&.is-active
 			background-image: url('../img/arr-up.svg')
+	&_orange
+		color: $accent
+		+f(14px, 500, 1)
+		padding-left: 18px
+		position: relative
+		+hover
+			background-color: transparent
+			color: $indigo-title
+			.icon-arr-left_sm
+				fill: $indigo-title

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><defs>
         <style>
+            .cls-1{fill:#d78920;fill-rule:evenodd}
+        </style>
+    
+        <style>
             .cls-1{fill:#fff;fill-rule:evenodd}
         </style>
     
@@ -22,7 +26,10 @@
         <style>
             .cls-1{fill:#4e6e8a;fill-rule:evenodd;opacity:.8}
         </style>
-    </defs><symbol id="icon-close" viewBox="0 0 18.437 18.44">
+    </defs><symbol id="icon-arr-left_sm" viewBox="0 0 8 13">
+    
+    <path id="arr-left_sm" class="cls-1" d="M568 256.63l-1.4 1.37-6.6-6.494 1.395-1.374zm0-10.26l-1.4-1.37-6.6 6.494 1.395 1.374z" transform="translate(-560 -245)"/>
+</symbol><symbol id="icon-close" viewBox="0 0 18.437 18.44">
     
     <path id="close" class="cls-1" d="M827.6 1118.85l1.415-1.42 17.013 17.02-1.414 1.41zm18.419 0l-1.415-1.42-17.013 17.02 1.414 1.41z" transform="translate(-827.594 -1117.44)"/>
 </symbol><symbol id="icon-facebook" viewBox="0 0 10 19">

@@ -1,0 +1,34 @@
+---
+title: Introduction
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block({class: 'header_absolute'})}}
+	<!-- HEADER -->
+	
+	<!-- TOP FULL -->
+	{{top_full.top_full(
+		{
+			img:'sber-top-full',
+			headline:'Решение инкассации для Сбербанка',
+			list: ['Главная', 'Направления', 'Мониторинг транспорта', 'Решение инкассации для Сбербанка']
+		}
+		)}}
+	<!-- TOP FULL -->
+	
+	<!-- INTRODUCTION -->
+	{% include "partials/_introduction.html" %}
+	<!-- INTRODUCTION -->
+	
+	<!-- FOOTER -->
+	{{footer.footer()}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}
