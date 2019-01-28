@@ -9,9 +9,14 @@ title: Destination
 	{{header.block({class: 'header_absolute'})}}
 	<!-- HEADER -->
 	
-	<!-- DESTINATION -->
-	{% include "partials/_destination.html" %}
-	<!-- DESTINATION -->
+	<!-- TOP FULL -->
+	{{top_full.top_full(
+		{
+			headline:'Мониторинг транспорта',
+			list: ['Главная', 'Мониторинг транспорта']
+		}
+		)}}
+	<!-- TOP FULL -->
 	
 	<!-- ARTICLE -->
 	{% include "partials/_article.html" %}
