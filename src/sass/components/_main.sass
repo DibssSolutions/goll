@@ -19,6 +19,16 @@
 .slider
 	max-width: 1100px
 	margin: 0 auto
+	white-space: nowrap
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: opacity .3s, visibility .3s
+	&.slick-initialized
+		opacity: 1
+		visibility: visible
+		overflow: visible
+		white-space: normal
 	&__item
 	+hover
 		.slider__item
