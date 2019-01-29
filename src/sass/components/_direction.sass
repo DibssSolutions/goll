@@ -1,0 +1,58 @@
+.direction
+    &__inner
+        margin: 0 -60px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        +sm
+            margin: 0 -20px
+    &__item
+        padding: 0 60px
+        width: 50%
+        margin-bottom: 70px
+        +sm
+            padding: 0 30px
+            margin-bottom: 50px
+        +xs
+            width: 100%
+.direction-item
+    &__img
+        width: 316px
+        height: 316px
+        border-radius: 50%
+        +cover
+        +sm
+            width: 100%
+            height: 0
+            padding-bottom: 100%
+        +xs
+            margin: 0 auto
+            max-width: 316px
+            padding-bottom: 0
+            height: 316px
+        +xxs
+            margin: 0
+            max-width: 80%
+            height: 0
+            padding-bottom: 80%
+    &__title
+        color: $indigo-title
+        margin-top: 60px
+        +sm
+            margin-top: 30px
+    & p, &__button, &__list
+        margin-top: 35px
+    & p
+        line-height: 1.4
+    &__list
+        padding-left: 15px
+        & .list__item
+            color: $indigo-light
+            transition: color .3s
+    &__link
+        // display: inline-block
+        transition: color .3s
+        +hover
+            color: $accent
+            .list__item
+                color: $accent

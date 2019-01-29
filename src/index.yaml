@@ -18,4 +18,8 @@ PageList:
 - file: promo.html
   ready: 100
 - file: introduction.html
-  ready: 20
+  ready: 100
+- file: direction.html
+  ready: 100
+- file: text.html
+  ready: 100

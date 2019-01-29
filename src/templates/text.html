@@ -1,0 +1,45 @@
+---
+title: About
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block()}}
+	<!-- HEADER -->
+	
+	<!-- ABOUT TOP -->
+	{{headline.headline(
+		{
+			headline: 'Поставка мониторингового оборудования',
+			list: ['Главная', 'Продукты и решения']
+		}
+		)}}
+	<!-- ABOUT TOP -->
+
+	<!-- ABOUT MAIN -->
+	{% include "partials/_about.html" %}
+	<!-- ABOUT MAIN -->
+
+	<!-- VIDEO DESCR -->
+	{% include "partials/_paragraph.html" %}
+	<!-- VIDEO DESCR -->
+
+	<!-- VIDEO -->
+	{% include "partials/_video.html" %}
+	<!-- VIDEO -->
+	
+	<!-- TEXT -->
+	{% include "partials/_text.html" %}
+	<!-- TEXT -->
+
+	<!-- FOOTER -->
+	{{footer.footer()}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}

@@ -1,0 +1,32 @@
+.paragraph
+    margin-top: 60px
+    &__title
+        color: $indigo-title
+        margin-bottom: 30px
+    & p
+        line-height: 1.4
+    
+.text
+    & p
+        line-height: 1.4
+        margin-bottom: 30px
+    &__quote
+        margin-bottom: 30px
+.quote
+    padding-left: 115px
+    line-height: 1.4
+    position: relative
+    +sm
+        padding-left: 80px
+    &:before
+        content: ''
+        position: absolute
+        top: 0px
+        left: 60px
+        display: block
+        width: 32px
+        height: 22px
+        background-image: url('../img/quotes.png')
+        +contain
+        +sm
+            left: 25px

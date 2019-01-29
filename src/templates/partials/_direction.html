@@ -1,0 +1,24 @@
+{% import "data/direction.html" as data %}
+<section class="direction">
+    <div class="direction__container container container_sm">
+        <div class="direction__inner">
+            {% for item in data.dir %}
+            <div class="direction__item">
+                <div class="direction-item">
+                    <div class="direction-item__img" style="background-image: url('./img/{{item.img}}.png')"></div>
+                    <h2 class="direction-item__title title-l">{{item.title}}</h2>
+                    <p>{{item.text}}</p>
+                    <button type="button" class="direction-item__button button button_border">Подробнее</button>
+                    <ul class="direction-item__list list">
+                        {% for list_item in item.list %}
+                        <li class="list__item title-s">
+                            <a href="#" class="direction-item__link">{{list_item}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

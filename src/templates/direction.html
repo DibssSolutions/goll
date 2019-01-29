@@ -1,0 +1,33 @@
+---
+title: Direction
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<!-- HEADER -->
+	{{header.block()}}
+	<!-- HEADER -->
+	
+	<!-- ABOUT TOP -->
+	{{headline.headline(
+		{
+			headline: 'Направления',
+			list: ['Главная', 'Направления']
+		}
+		)}}
+	<!-- ABOUT TOP -->
+	
+	<!-- DIRECTION -->
+	{% include "partials/_direction.html" %}
+	<!-- DIRECTION -->
+
+	<!-- FOOTER -->
+	{{footer.footer()}}
+	<!-- FOOTER -->
+	
+	<!-- LOGIN FORM -->
+	{% include "partials/_login.html" %}
+	<!-- LOGIN FORM -->
+
+{% endblock %}
