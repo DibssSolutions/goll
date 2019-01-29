@@ -1,17 +1,32 @@
 .introduction
     margin-top: -50px
+    padding-bottom: 80px
+    +sm
+        margin-top: 100px
+        padding-bottom: 40px
     &__container
         padding: 0 60px
         max-width: 1250px
+        +sm
+            padding: 0
     &__inner
         margin-left: -50px
         +clr
+        +sm
+            margin: 0
     &__left
         float: left
         padding: 0 50px 30px 0
         width: 50%
         max-width: 559px
+        +sm
+            float: none
+            width: 100%
+            padding: 0
+            max-width: none
     &__right
+    +sm
+        position: relative
 
 .task
     padding: 34px 42px 42px 42px
@@ -29,8 +44,13 @@
         color: $indigo-title
     &__list
         margin-left: 30px
+    +sm
+        padding: 80px 20px 40px 20px
 
 .partner
+    +sm
+        padding: 0 20px
+        margin-top: 37px
     &__logo-wrap
         width: 160px
         height: 160px
@@ -40,16 +60,29 @@
         position: relative
         display: inline-block
         +pseudo
+        +sm
+            position: absolute
+            top: 0
+            transform: translate(-50%, -50%)
+            left: 50%
         &:before, &:after
             display: block
+            border-radius: 50%
+            border: 1px solid rgba(225, 225, 225, 0.2)
+            +vcenter
+        &:before
             width: 222px
             height: 222px
-            border-radius: 50%
-            border: 1px solid rgba(225, 225, 225, 0.1)
-            +vcenter
+            +sm
+                top: -25px
+                transform: translateX(-50%)
+                left: 50%
+                border-color: $request
         &:after
             width: 467px
             height: 467px
+            +sm
+                display: none
     &__logo
         max-width: 100%
         +vcenter
