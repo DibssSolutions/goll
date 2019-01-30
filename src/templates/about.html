@@ -6,7 +6,11 @@ title: About
 {% block content %}
 
 	<!-- HEADER -->
-	{{header.block()}}
+	{{header.block(
+		{
+			index: '1'
+		}
+	)}}
 	<!-- HEADER -->
 	
 	<!-- ABOUT TOP -->
